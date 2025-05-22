@@ -12,7 +12,10 @@ const Section1 = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   document.title = "Gadget Store";
   const showSlide = (index) => {
-    const slides = document.querySelectorAll(".carousel-slide");
+    const slides =
+      window.innerWidth > 900
+        ? document.querySelectorAll(".card-large")
+        : document.querySelectorAll(".card-small");
     if (index < 0) {
       setSlideIndex(slides.length - 1);
     } else if (index >= slides.length) {
@@ -51,6 +54,13 @@ const Section1 = () => {
             src="https://res.cloudinary.com/dv3qbj0bn/image/upload/v1700152858/gadget-store/sv1x9mvkpnwulkyxvnuk.webp"
             loading="eager"
             alt="Redmi Note 12 Pro 5G"
+            className="card-large"
+          />
+          <img
+            src="https://res.cloudinary.com/dv3qbj0bn/image/upload/c_crop,x_380,w_750,h_500/v1700152858/gadget-store/sv1x9mvkpnwulkyxvnuk.webp"
+            loading="eager"
+            alt="Redmi Note 12 Pro 5G"
+            className="card-small"
           />
         </Link>
         <Link
@@ -65,6 +75,7 @@ const Section1 = () => {
             src="https://res.cloudinary.com/dv3qbj0bn/image/upload/v1700152858/gadget-store/dldza9wau2nzxvlzrllo.webp"
             loading="lazy"
             alt="Vivo T2 5G"
+            className="card-large"
           />
         </Link>
         <Link
@@ -79,6 +90,13 @@ const Section1 = () => {
             src="https://res.cloudinary.com/dv3qbj0bn/image/upload/v1700152858/gadget-store/cxfbybjwhfuufpiepgfu.webp"
             loading="lazy"
             alt="Realme 11 Pro+ 5G"
+            className="card-large"
+          />
+          <img
+            src="https://res.cloudinary.com/dv3qbj0bn/image/upload/c_crop,x_380,w_750,h_500/v1700152858/gadget-store/cxfbybjwhfuufpiepgfu.webp"
+            loading="lazy"
+            alt="Realme 11 Pro+ 5G"
+            className="card-small"
           />
         </Link>
         <Link
@@ -93,6 +111,13 @@ const Section1 = () => {
             src="https://res.cloudinary.com/dv3qbj0bn/image/upload/v1700152858/gadget-store/coytkw0mqdkbczw66env.webp"
             loading="lazy"
             alt="Vivo T2 Pro 5G"
+            className="card-large"
+          />
+          <img
+            src="https://res.cloudinary.com/dv3qbj0bn/image/upload/c_crop,x_380,w_750,h_500/v1700152858/gadget-store/coytkw0mqdkbczw66env.webp"
+            loading="lazy"
+            alt="Vivo T2 Pro 5G"
+            className="card-small"
           />
         </Link>
         <Link
@@ -107,6 +132,13 @@ const Section1 = () => {
             src="https://res.cloudinary.com/dv3qbj0bn/image/upload/v1700152858/gadget-store/pbu5vkeangccekjzvbwu.webp"
             loading="lazy"
             alt="Realme C53 5G"
+            className="card-large"
+          />
+          <img
+            src="https://res.cloudinary.com/dv3qbj0bn/image/upload/c_crop,x_380,w_750,h_500/v1700152858/gadget-store/pbu5vkeangccekjzvbwu.webp"
+            loading="lazy"
+            alt="Realme C53 5G"
+            className="card-small"
           />
         </Link>
         <button
@@ -118,11 +150,6 @@ const Section1 = () => {
         >
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
-      </div>
-      <div id="carousel-mobile">
-        <Link to="/mobiles" className="carousel-slide-mobile">
-          <img loading="lazy" src={poster1} alt="poster1" />
-        </Link>
       </div>
       <div id="posters">
         <Link

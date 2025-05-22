@@ -64,16 +64,16 @@
 
 #nav-user {
   margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .user-item {
   text-decoration: none;
   color: black;
-  padding: 5px;
-  margin: 10px;
-  width: max-content;
-  height: max-content;
-  display: inline-block;
+  padding: 10px;
   border-radius: 20px;
   transition: all 0.5s ease;
   background: #fff;
@@ -84,7 +84,7 @@
 .user-item:hover {
   background: #2a55e5;
   background: #000;
-  color: black;
+  color: white;
 }
 
 .user-item:hover img {
@@ -183,12 +183,18 @@
     display: none;
   }
 
-  .user-item {
+  #nav-user {
+    gap: 0px;
     position: absolute;
-    right: 0;
-    top: 2px;
-    border-radius: 5px;
-    border: none;
+    right: 2px;
+    top: 0px;
+    margin-top: 10px;
+  }
+
+
+  .user-item[title="Account"] svg,
+  .user-item[title="Cart"] svg {
+    font-size: 1.3em;
   }
 
   .user-item:nth-child(3) {
@@ -199,10 +205,6 @@
     border: none;
     background: white;
     color: black;
-  }
-
-  .user-item img {
-    width: 30px;
   }
 
   #navbar {

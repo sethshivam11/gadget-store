@@ -1,14 +1,15 @@
 import React from "react";
 import "../../style/client/navbar.css";
-import user from "../../img/user.svg";
-import search from "../../img/search.svg";
-import cart from "../../img/cart.svg";
-import search2 from "../../img/search.png";
 import logo from "../../img/logo.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faCartShopping,
+  faMagnifyingGlass,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = (props) => {
   const location = useLocation();
@@ -61,7 +62,10 @@ const Navbar = (props) => {
         id="nav-mobile"
         onClick={handleNav}
         title="Menu"
-        style={{ color: `${nav === 0 ? "white" : "black"}`, zIndex: `${z ? z + 1: "5"}`}}
+        style={{
+          color: `${nav === 0 ? "white" : "black"}`,
+          zIndex: `${z ? z + 1 : "5"}`,
+        }}
       >
         <FontAwesomeIcon icon={faBars} />
       </button>
@@ -116,13 +120,13 @@ const Navbar = (props) => {
             className="user-item"
             onClick={showSearch}
           >
-            <img loading="eager" src={search} alt="search" />
+            <FontAwesomeIcon icon={faMagnifyingGlass} size="2xl" />
           </button>
           <Link to="/account" title="Account" className="user-item">
-            <img loading="eager" src={user} alt="user" />
+            <FontAwesomeIcon icon={faUser} size="2xl" />
           </Link>
           <Link to="/cart" title="Cart" className="user-item">
-            <img loading="eager" src={cart} alt="cart" />
+            <FontAwesomeIcon icon={faCartShopping} size="2xl" />
           </Link>
         </span>
       </nav>
@@ -130,12 +134,13 @@ const Navbar = (props) => {
       <nav id="sec-nav" ref={Ref}>
         <form id="search-bar" onSubmit={handleSearch}>
           <button id="search-btn" type="submit">
-            <img loading="eager" src={search2} alt="search" />
+            <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" color="gray" />
           </button>
           <input
             type="text"
             placeholder="Search"
             autoCapitalize="on"
+            autoComplete="off"
             name="search"
             id="search-input"
           />
@@ -147,7 +152,7 @@ const Navbar = (props) => {
         style={{
           transition: "transform 0.3s ease",
           transform: `translateX(${nav}%)`,
-          zIndex: z
+          zIndex: z,
         }}
       >
         <span className="third-nav-list">
