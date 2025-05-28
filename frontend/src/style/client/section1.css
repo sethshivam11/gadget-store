@@ -13,6 +13,7 @@
   margin-bottom: 20px;
   border: 1px solid darkgray;
   border-radius: 5px;
+  position: relative;
 }
 
 #carousel a {
@@ -50,13 +51,13 @@
 #left-car {
   border-radius: 0px 10px 10px 0px;
   border-left: none;
-  left: 1%;
+  left: 0;
 }
 
 #right-car {
   border-radius: 10px 0px 0px 10px;
   border-right: none;
-  right: 0.69%;
+  right: 0;
 }
 
 #posters {
@@ -103,7 +104,7 @@
 }
 
 .card-small {
-    display: none;
+  display: none;
 }
 
 @media only screen and (max-width: 1140px) and (min-width: 901px) {
@@ -122,6 +123,7 @@
   #carousel {
     margin-top: 110px;
     margin-bottom: 0px;
+    min-height: 130px;
   }
   .carousel-slide-mobile {
     display: none;

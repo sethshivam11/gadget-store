@@ -61,3 +61,22 @@ code {
   object-fit: contain;
   user-select: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .health-loading h1 {
+    font-size: 1.5rem;
+  }
+
+  .service-unavailable h1 {
+    font-size: 1.5rem;
+  }
+
+  .service-unavailable p {
+    font-size: 1rem;
+  }
+
+  .service-unavailable img {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -81,7 +81,7 @@ const App = () => {
   }, []);
 
   return serviceAvailable ? (
-    <div>
+    <div style={{ maxWidth: "1600px", margin: "0 auto", position: "relative" }}>
       <LoadingBar color="red" progress={progress} height={"3px"} />
       <Toaster position="bottom-center" />
       <Suspense
