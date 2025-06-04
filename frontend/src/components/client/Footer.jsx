@@ -3,7 +3,7 @@ import "../../style/client/footer.css";
 import logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faTwitter, faLinkedin, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faTwitter, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 
 const Footer = (props) => {
@@ -93,7 +93,7 @@ const Footer = (props) => {
         <ul className="footer-list no">
           <li className="footer-nav">
             <Link
-              to="https://instagram.com/_seth_shivam"
+              to="https://instagram.com/sethshivam11"
               rel="noreferrer"
               target="_blank"
             >
@@ -103,17 +103,17 @@ const Footer = (props) => {
           </li>
           <li className="footer-nav">
             <Link
-              to="https://www.facebook.com/people/Shivam-Soni/pfbid0CadrrAFrFQvjYw7wNBk5xqSHr36d4B8JJ2pp9CPGgC3PgHAVw8GFUfeswuFbbopGl/"
+              to="https://github.com/sethshivam11"
               rel="noreferrer"
               target="_blank"
             >
-              <FontAwesomeIcon icon={faFacebook} />
-              &nbsp;&nbsp;&nbsp;&nbsp;Facebook
+              <FontAwesomeIcon icon={faGithub} />
+              &nbsp;&nbsp;&nbsp;&nbsp;GitHub
             </Link>
           </li>
           <li className="footer-nav">
             <Link
-              to="https://www.linkedin.com/in/shivam-soni-20531a28b"
+              to="https://www.linkedin.com/in/sethshivam11"
               rel="noreferrer"
               target="_blank"
             >
@@ -123,7 +123,7 @@ const Footer = (props) => {
           </li>
           <li className="footer-nav">
             <Link
-              to="https://twitter.com/shivam700216"
+              to="https://x.com/sethshivam11"
               rel="noreferrer"
               target="_blank"
             >
@@ -137,7 +137,7 @@ const Footer = (props) => {
             <FontAwesomeIcon icon={faCopyright} />
             &nbsp;All Rights Reserved. Developer:&nbsp;
             <a
-              href="https://www.linkedin.com/in/shivam-soni-20531a28b"
+              href="https://sethshivam11.vercel.app"
               target="_blank"
               rel="noreferrer"
             >
